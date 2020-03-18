@@ -2,10 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-
-  build:
-
-  build:
+  build-and-test:
     executor:
       name: node/default
     steps:
@@ -17,9 +14,3 @@ workflows:
     build-and-test:
       jobs:
         - build
-            
-workflows:
-    build-and-test:
-      jobs:
-        - build
-
